@@ -12,6 +12,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var buttonTapped = UIButton()
     
+    enum ViewMovement { case out, backIn }
+    
+    let verticalRange: CGFloat = 600
+    let horizontalRange: CGFloat = 400
+    
+    let offScreenPosition = CGPoint(x: 207.0, y: -232.0)
+    
+    @IBOutlet weak var grids: UIView!
+    
     @IBOutlet weak var topRectangle: UIButton!
     @IBOutlet weak var bottomRectangle: UIButton!
     @IBOutlet weak var topLeftSquare: UIButton!
@@ -22,6 +31,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topRectangleLayout: UIButton!
     @IBOutlet weak var bottomRectangleLayout: UIButton!
     @IBOutlet weak var squaresLayout: UIButton!
+    
+    @IBOutlet var swipeUpButton: [UIButton]!
+    @IBOutlet weak var swipeLeftButton: UIButton!
+    
     
     //MARK: UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -39,7 +52,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var swipeUp = [UISwipeGestureRecognizer]()
+        
+        swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
+        swipeUp[0].direction = .up
+        
+        swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
+        swipeUp[1].direction = .up
+        
+        swipeUpButton[0].addGestureRecognizer(swipeUp[0])
+        swipeUpButton[1].addGestureRecognizer(swipeUp[1])
+        
+//        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:)))
+//        swipeLeft.direction = .left
+//        signLeft.addGestureRecognizer(swipeLeft)
+//        swipeLeftToShare.addGestureRecognizer(swipeLeft)
     }
     
     
@@ -138,7 +166,82 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    //MARK: swipe to share
+    @objc func swipeGesture(with gesture: UISwipeGestureRecognizer) {
+        switch gesture.direction {
+        case .up:
+            moveViewVertically(.out, range: verticalRange)
+            shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "plus")), deviceOrientation: "portrait")
+        case .left:
+            moveViewHorizontally(.out, range: horizontalRange)
+            shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "plus")), deviceOrientation: "landscape")
+        default:
+            break
+        }
+    }
 
+    private func moveViewVertically(_ movement: ViewMovement, range: CGFloat) {
+        switch movement {
+        case .out:
+            UIView.animate(withDuration: 0.5) {
+                self.grids.center.y -= range
+            }
+        case .backIn:
+            UIView.animate(withDuration: 0.5) {
+                self.grids.center.y += range
+            }
+        }
+    }
+
+    private func moveViewHorizontally(_ movement: ViewMovement, range: CGFloat) {
+        switch movement {
+        case .out:
+            UIView.animate(withDuration: 0.5) {
+                self.grids.center.x -= range
+            }
+        case .backIn:
+            UIView.animate(withDuration: 0.5) {
+                self.grids.center.x += range
+            }
+        }
+    }
+    
+    //MARK: share
+    private func shareGrid(with imageToShare: UIImage, deviceOrientation: String) {
+        let activityViewController = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: {
+            print("presented")
+            //self.grids.center = self.offScreenPosition
+            print("position share is \(self.grids.center)")
+        })
+        
+        switch deviceOrientation {
+        case "portrait":
+            activityViewController.completionWithItemsHandler = {(UIActivityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+                if !completed {
+                    print("cancelled")
+                    self.moveViewVertically(.backIn, range: self.verticalRange)
+                }
+                if completed {
+                    print("completed")
+                    self.moveViewVertically(.backIn, range: self.verticalRange)
+                }
+            }
+        case "landscape":
+            activityViewController.completionWithItemsHandler = {(UIActivityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+                if !completed {
+                    print("cancelled")
+                    self.moveViewHorizontally(.backIn, range: self.horizontalRange)
+                }
+                if completed {
+                    self.moveViewHorizontally(.backIn, range: self.horizontalRange)
+                }
+            }
+        default:
+            break
+        }
+    }
+    
         
 }
 
