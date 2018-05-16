@@ -1,24 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Delm-Medium.otf">
+            <string>Delm-Medium</string>
+        </array>
+        <array key="ThirstySoftRegular.otf">
+            <string>ThirstySoftRegular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41X-If-N8Z">
+                                <rect key="frame" x="48" y="555" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="41X-If-N8Z" secondAttribute="height" multiplier="1:1" id="RMB-UC-JJb"/>
+                                </constraints>
+                                <state key="normal" image="Layout 1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG1-I3-AaE">
+                                <rect key="frame" x="147.5" y="554.5" width="79.5" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yG1-I3-AaE" secondAttribute="height" multiplier="1:1" id="7ya-nl-GzB"/>
+                                </constraints>
+                                <state key="normal" image="rectangleDownSelected"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdC-Nc-xI5">
+                                <rect key="frame" x="247" y="555" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mdC-Nc-xI5" secondAttribute="height" multiplier="1:1" id="UdL-Zs-V85"/>
+                                </constraints>
+                                <state key="normal" image="Layout 3"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-If-o6F">
+                                <rect key="frame" x="37.5" y="183" width="300" height="299.5"/>
+                                <color key="backgroundColor" red="0.17254901960784313" green="0.40000000000000002" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zUU-If-o6F" secondAttribute="height" multiplier="1:1" id="HJE-ET-hbU"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-Pn-sf0">
+                                <rect key="frame" x="180" y="96.5" width="15" height="22"/>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="17"/>
+                                <state key="normal" image="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;}"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ece-6i-rPb">
+                                <rect key="frame" x="126" y="48" width="123" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="Rwt-Jg-AaI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3O-Yd-gEJ">
+                                <rect key="frame" x="108" y="131" width="159" height="41"/>
+                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
+                                <state key="normal" title="swipe up to share"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74117647060000003" green="0.83921568629999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yG1-I3-AaE" firstAttribute="bottom" secondItem="41X-If-N8Z" secondAttribute="bottom" id="4LB-5e-ALc"/>
+                            <constraint firstItem="zUU-If-o6F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="163" id="8D8-qn-ySD"/>
+                            <constraint firstItem="41X-If-N8Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="9ud-1t-VEF"/>
+                            <constraint firstItem="H3O-Yd-gEJ" firstAttribute="top" secondItem="z1e-Pn-sf0" secondAttribute="bottom" constant="12.5" id="C92-Eb-b01"/>
+                            <constraint firstItem="Ece-6i-rPb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eu5-3u-RhH"/>
+                            <constraint firstItem="H3O-Yd-gEJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GOR-h7-EUs"/>
+                            <constraint firstItem="zUU-If-o6F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HsC-aH-7Vm"/>
+                            <constraint firstItem="mdC-Nc-xI5" firstAttribute="width" secondItem="41X-If-N8Z" secondAttribute="width" id="PZs-0X-DnY"/>
+                            <constraint firstItem="yG1-I3-AaE" firstAttribute="leading" secondItem="41X-If-N8Z" secondAttribute="trailing" constant="20" id="RZe-Eq-bTH"/>
+                            <constraint firstItem="z1e-Pn-sf0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRF-8W-5br"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="41X-If-N8Z" secondAttribute="bottom" constant="32" id="bBO-br-HaV"/>
+                            <constraint firstItem="yG1-I3-AaE" firstAttribute="top" secondItem="zUU-If-o6F" secondAttribute="bottom" constant="72" id="c1S-Ui-z4A"/>
+                            <constraint firstItem="mdC-Nc-xI5" firstAttribute="leading" secondItem="yG1-I3-AaE" secondAttribute="trailing" constant="20" id="lfQ-ba-jKj"/>
+                            <constraint firstItem="Ece-6i-rPb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="sHm-KW-zPo"/>
+                            <constraint firstItem="mdC-Nc-xI5" firstAttribute="bottom" secondItem="41X-If-N8Z" secondAttribute="bottom" id="ttR-EP-uzg"/>
+                            <constraint firstItem="zUU-If-o6F" firstAttribute="top" secondItem="H3O-Yd-gEJ" secondAttribute="bottom" constant="11" id="vyq-Ph-nfi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mdC-Nc-xI5" secondAttribute="trailing" constant="48" id="xCC-4i-jv2"/>
+                            <constraint firstItem="yG1-I3-AaE" firstAttribute="width" secondItem="41X-If-N8Z" secondAttribute="width" id="zBh-8q-NY5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;}" width="15" height="9"/>
+        <image name="Layout 1" width="80" height="80"/>
+        <image name="Layout 3" width="80" height="80"/>
+        <image name="rectangleDownSelected" width="80" height="80"/>
+    </resources>
 </document>

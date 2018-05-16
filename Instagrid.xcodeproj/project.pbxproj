@@ -12,6 +12,8 @@
 		9015874E20AC2B770024B7DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9015874C20AC2B770024B7DA /* Main.storyboard */; };
 		9015875020AC2B780024B7DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9015874F20AC2B780024B7DA /* Assets.xcassets */; };
 		9015875320AC2B780024B7DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9015875120AC2B780024B7DA /* LaunchScreen.storyboard */; };
+		9015875C20AC39FA0024B7DA /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9015875A20AC39FA0024B7DA /* Delm-Medium.otf */; };
+		9015875D20AC39FA0024B7DA /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9015874F20AC2B780024B7DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9015875220AC2B780024B7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9015875420AC2B780024B7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9015875A20AC39FA0024B7DA /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				9015874F20AC2B780024B7DA /* Assets.xcassets */,
 				9015875120AC2B780024B7DA /* LaunchScreen.storyboard */,
 				9015875420AC2B780024B7DA /* Info.plist */,
+				9015875A20AC39FA0024B7DA /* Delm-Medium.otf */,
+				9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -124,6 +130,8 @@
 			files = (
 				9015875320AC2B780024B7DA /* LaunchScreen.storyboard in Resources */,
 				9015875020AC2B780024B7DA /* Assets.xcassets in Resources */,
+				9015875D20AC39FA0024B7DA /* ThirstySoftRegular.otf in Resources */,
+				9015875C20AC39FA0024B7DA /* Delm-Medium.otf in Resources */,
 				9015874E20AC2B770024B7DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
