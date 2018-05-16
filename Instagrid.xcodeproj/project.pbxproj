@@ -23,9 +23,9 @@
 		9015874D20AC2B770024B7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9015874F20AC2B780024B7DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9015875220AC2B780024B7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9015875420AC2B780024B7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9015875A20AC39FA0024B7DA /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		90E5AE1A20AC7DF0003A69E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,40 @@
 		9015874720AC2B770024B7DA /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				9015874820AC2B770024B7DA /* AppDelegate.swift */,
+				90E5AE1A20AC7DF0003A69E4 /* Info.plist */,
+				90FEBB3A20AC7961004BAFAD /* Controller */,
+				90FEBB3B20AC7971004BAFAD /* View */,
+				90FEBB3C20AC7990004BAFAD /* Supporting Files */,
+			);
+			path = Instagrid;
+			sourceTree = "<group>";
+		};
+		90FEBB3A20AC7961004BAFAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				9015874A20AC2B770024B7DA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		90FEBB3B20AC7971004BAFAD /* View */ = {
+			isa = PBXGroup;
+			children = (
 				9015874C20AC2B770024B7DA /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		90FEBB3C20AC7990004BAFAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9015874820AC2B770024B7DA /* AppDelegate.swift */,
 				9015874F20AC2B780024B7DA /* Assets.xcassets */,
 				9015875120AC2B780024B7DA /* LaunchScreen.storyboard */,
-				9015875420AC2B780024B7DA /* Info.plist */,
 				9015875A20AC39FA0024B7DA /* Delm-Medium.otf */,
 				9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */,
 			);
-			path = Instagrid;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.t8lv4.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.t8lv4.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
