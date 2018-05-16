@@ -69,7 +69,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             pickPhotoFromLibrary(for: sender)
         default:
             break
-            
         }
     }
     
@@ -87,6 +86,58 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
+    
+    //choose grid's layout
+    @IBAction func chooseLayout(_ sender: UIButton) {
+        switch sender.tag {
+            /*
+             -- grids selectors tags layout --
+             
+             topRectangleLayout.tag = 0
+             bottomRectangleLayout.tag = 1
+             squaresLayout.tag = 2
+             */
+        case 0:
+            topRectangle.isHidden = false
+            bottomRectangle.isHidden = true
+            bottomLeftSquare.isHidden = false
+            bottomRightSquare.isHidden = false
+            topLeftSquare.isHidden = true
+            topRightSquare.isHidden = true
+            
+            sender.isSelected = true
+            bottomRectangleLayout.isSelected = false
+            squaresLayout.isSelected = false
+            
+        case 1:
+            topRectangle.isHidden = true
+            bottomRectangle.isHidden = false
+            topLeftSquare.isHidden = false
+            topRightSquare.isHidden = false
+            bottomLeftSquare.isHidden = true
+            bottomRightSquare.isHidden = true
+            
+            sender.isSelected = true
+            topRectangleLayout.isSelected = false
+            squaresLayout.isSelected = false
+            
+        case 2:
+            topRectangle.isHidden = true
+            bottomRectangle.isHidden = true
+            topLeftSquare.isHidden = false
+            topRightSquare.isHidden = false
+            bottomLeftSquare.isHidden = false
+            bottomRightSquare.isHidden = false
+            
+            sender.isSelected = true
+            topRectangleLayout.isSelected = false
+            bottomRectangleLayout.isSelected = false
+            
+        default:
+            break
+        }
+    }
+    
 
         
 }

@@ -34,6 +34,7 @@
                                     <constraint firstAttribute="width" secondItem="41X-If-N8Z" secondAttribute="height" multiplier="1:1" id="q8f-Ss-UVU"/>
                                 </constraints>
                                 <state key="normal" image="Layout 1"/>
+                                <state key="selected" image="rectangleUpSelected"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="q8f-Ss-UVU"/>
@@ -45,14 +46,18 @@
                                         <include reference="q8f-Ss-UVU"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="chooseLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TjY-R0-XwA"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdC-Nc-xI5" userLabel="squaresLayout">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdC-Nc-xI5" userLabel="squaresLayout">
                                 <rect key="frame" x="247.5" y="555.5" width="79.5" height="79.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mdC-Nc-xI5" secondAttribute="height" multiplier="1:1" id="LP1-83-jiH"/>
                                     <constraint firstAttribute="width" secondItem="mdC-Nc-xI5" secondAttribute="height" multiplier="1:1" id="UdL-Zs-V85"/>
                                 </constraints>
                                 <state key="normal" image="Layout 3"/>
+                                <state key="selected" image="fourSquareSelected"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="LP1-83-jiH"/>
@@ -62,6 +67,71 @@
                                     <mask key="constraints">
                                         <include reference="LP1-83-jiH"/>
                                         <exclude reference="UdL-Zs-V85"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="chooseLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qax-cV-qMl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG1-I3-AaE" userLabel="bottomRectangleLayout">
+                                <rect key="frame" x="148" y="555" width="79.5" height="79.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yG1-I3-AaE" secondAttribute="height" multiplier="1:1" id="7ya-nl-GzB"/>
+                                    <constraint firstAttribute="width" secondItem="yG1-I3-AaE" secondAttribute="height" multiplier="1:1" id="Ot1-Ly-L8P"/>
+                                </constraints>
+                                <state key="normal" image="Layout 2"/>
+                                <state key="selected" image="rectangleDownSelected"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ot1-Ly-L8P"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="7ya-nl-GzB"/>
+                                        <include reference="Ot1-Ly-L8P"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="chooseLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mix-sV-gck"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-iv-lBi">
+                                <rect key="frame" x="9" y="197" width="176" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="Cfh-iC-ITi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="swipe left to share"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cfh-iC-ITi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
+                                    <mask key="constraints">
+                                        <include reference="Cfh-iC-ITi"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9m-sM-tMb" userLabel="signLeft">
+                                <rect key="frame" x="92.5" y="169" width="9" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="9" id="7FP-1p-q0I"/>
+                                    <constraint firstAttribute="height" constant="15" id="Uma-Ft-x5K"/>
+                                </constraints>
+                                <state key="normal" image="sign left"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7FP-1p-q0I"/>
+                                        <exclude reference="Uma-Ft-x5K"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7FP-1p-q0I"/>
+                                        <include reference="Uma-Ft-x5K"/>
                                     </mask>
                                 </variation>
                             </button>
@@ -198,64 +268,6 @@
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <state key="normal" title="swipe up to share"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG1-I3-AaE" userLabel="bottomRectangleLayout">
-                                <rect key="frame" x="148" y="555.5" width="79.5" height="79.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="yG1-I3-AaE" secondAttribute="height" multiplier="1:1" id="7ya-nl-GzB"/>
-                                    <constraint firstAttribute="width" secondItem="yG1-I3-AaE" secondAttribute="height" multiplier="1:1" id="Ot1-Ly-L8P"/>
-                                </constraints>
-                                <state key="normal" image="rectangleDownSelected"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ot1-Ly-L8P"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="7ya-nl-GzB"/>
-                                        <include reference="Ot1-Ly-L8P"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-iv-lBi">
-                                <rect key="frame" x="9" y="197" width="176" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="Cfh-iC-ITi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="swipe left to share"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Cfh-iC-ITi"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
-                                    <mask key="constraints">
-                                        <include reference="Cfh-iC-ITi"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9m-sM-tMb" userLabel="signLeft">
-                                <rect key="frame" x="92.5" y="169" width="9" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="9" id="7FP-1p-q0I"/>
-                                    <constraint firstAttribute="height" constant="15" id="Uma-Ft-x5K"/>
-                                </constraints>
-                                <state key="normal" image="sign left"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="7FP-1p-q0I"/>
-                                        <exclude reference="Uma-Ft-x5K"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="7FP-1p-q0I"/>
-                                        <include reference="Uma-Ft-x5K"/>
-                                    </mask>
-                                </variation>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.74117647060000003" green="0.83921568629999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -333,10 +345,10 @@
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="subviews">
-                                <exclude reference="z1e-Pn-sf0"/>
-                                <exclude reference="H3O-Yd-gEJ"/>
                                 <include reference="VNr-iv-lBi"/>
                                 <include reference="R9m-sM-tMb"/>
+                                <exclude reference="z1e-Pn-sf0"/>
+                                <exclude reference="H3O-Yd-gEJ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1PT-zc-Lik"/>
@@ -399,9 +411,12 @@
     </scenes>
     <resources>
         <image name="Layout 1" width="80" height="80"/>
+        <image name="Layout 2" width="80" height="80"/>
         <image name="Layout 3" width="80" height="80"/>
+        <image name="fourSquareSelected" width="80" height="80"/>
         <image name="plus" width="40" height="40"/>
         <image name="rectangleDownSelected" width="80" height="80"/>
+        <image name="rectangleUpSelected" width="80" height="80"/>
         <image name="sign left" width="10" height="15"/>
         <image name="sign up" width="15" height="9"/>
     </resources>
