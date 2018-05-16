@@ -27,36 +27,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41X-If-N8Z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41X-If-N8Z" userLabel="topRectangleLayout">
                                 <rect key="frame" x="48" y="555" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="41X-If-N8Z" secondAttribute="height" multiplier="1:1" id="RMB-UC-JJb"/>
                                 </constraints>
                                 <state key="normal" image="Layout 1"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG1-I3-AaE">
-                                <rect key="frame" x="147.5" y="554.5" width="79.5" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG1-I3-AaE" userLabel="bottomRectangleLayout">
+                                <rect key="frame" x="147.5" y="555" width="79.5" height="79.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yG1-I3-AaE" secondAttribute="height" multiplier="1:1" id="7ya-nl-GzB"/>
                                 </constraints>
                                 <state key="normal" image="rectangleDownSelected"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdC-Nc-xI5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdC-Nc-xI5" userLabel="squaresLayout">
                                 <rect key="frame" x="247" y="555" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mdC-Nc-xI5" secondAttribute="height" multiplier="1:1" id="UdL-Zs-V85"/>
                                 </constraints>
                                 <state key="normal" image="Layout 3"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-If-o6F">
-                                <rect key="frame" x="37.5" y="183" width="300" height="299.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-If-o6F" userLabel="grids">
+                                <rect key="frame" x="37.5" y="183" width="300" height="300"/>
                                 <color key="backgroundColor" red="0.17254901960784313" green="0.40000000000000002" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zUU-If-o6F" secondAttribute="height" multiplier="1:1" id="HJE-ET-hbU"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-Pn-sf0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-Pn-sf0" userLabel="signUp">
                                 <rect key="frame" x="180" y="96.5" width="15" height="22"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="17"/>
                                 <state key="normal" image="&lt;{:linearEase;0,182,116,12,22,450,1;10,182,116,12,22,450,0;}"/>
