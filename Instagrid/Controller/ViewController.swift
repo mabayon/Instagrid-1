@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     enum ViewMovement { case out, backIn }
     
     let verticalRange: CGFloat = 600
-    let horizontalRange: CGFloat = 400
+    let horizontalRange: CGFloat = 600
     
     let offScreenPosition = CGPoint(x: 207.0, y: -232.0)
     
@@ -33,7 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var squaresLayout: UIButton!
     
     @IBOutlet var swipeUpButton: [UIButton]!
-    @IBOutlet weak var swipeLeftButton: UIButton!
+    @IBOutlet var swipeLeftButton: [UIButton]!
     
     
     //MARK: UIImagePickerControllerDelegate
@@ -54,20 +54,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         
         var swipeUp = [UISwipeGestureRecognizer]()
+        var swipeLeft = [UISwipeGestureRecognizer]()
         
         swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
         swipeUp[0].direction = .up
-        
         swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
         swipeUp[1].direction = .up
-        
         swipeUpButton[0].addGestureRecognizer(swipeUp[0])
         swipeUpButton[1].addGestureRecognizer(swipeUp[1])
         
-//        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:)))
-//        swipeLeft.direction = .left
-//        signLeft.addGestureRecognizer(swipeLeft)
-//        swipeLeftToShare.addGestureRecognizer(swipeLeft)
+        swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
+        swipeLeft[0].direction = .left
+        swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
+        swipeLeft[1].direction = .left
+        swipeLeftButton[0].addGestureRecognizer(swipeLeft[0])
+        swipeLeftButton[1].addGestureRecognizer(swipeLeft[1])
+        
     }
     
     
