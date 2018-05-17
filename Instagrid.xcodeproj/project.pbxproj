@@ -14,6 +14,8 @@
 		9015875320AC2B780024B7DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9015875120AC2B780024B7DA /* LaunchScreen.storyboard */; };
 		9015875C20AC39FA0024B7DA /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9015875A20AC39FA0024B7DA /* Delm-Medium.otf */; };
 		9015875D20AC39FA0024B7DA /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */; };
+		90943BB820ADB4FF003C4DC9 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90943BB720ADB4FF003C4DC9 /* UIView+Shadow.swift */; };
+		90943BBA20ADB544003C4DC9 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90943BB920ADB544003C4DC9 /* UIView+Corner.swift */; };
 		90A3B35E20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A3B35D20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift */; };
 		90BBA15E20ACB1B3004A2CE2 /* RenderViewToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBA15D20ACB1B3004A2CE2 /* RenderViewToImage.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +29,9 @@
 		9015875220AC2B780024B7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9015875A20AC39FA0024B7DA /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
-		90A3B35D20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImagePickerController+DeviceOrientation.swift"; path = "Instagrid/Extensions/UIImagePickerController+DeviceOrientation.swift"; sourceTree = SOURCE_ROOT; };
+		90943BB720ADB4FF003C4DC9 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Shadow.swift"; path = "Instagrid/UIView+Shadow.swift"; sourceTree = SOURCE_ROOT; };
+		90943BB920ADB544003C4DC9 /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Corner.swift"; path = "Instagrid/UIView+Corner.swift"; sourceTree = SOURCE_ROOT; };
+		90A3B35D20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImagePickerController+DeviceOrientation.swift"; path = "Instagrid/UIImagePickerController+DeviceOrientation.swift"; sourceTree = SOURCE_ROOT; };
 		90BBA15D20ACB1B3004A2CE2 /* RenderViewToImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderViewToImage.swift; sourceTree = "<group>"; };
 		90E5AE1A20AC7DF0003A69E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,15 +47,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		90088EF420AC93D000B817E5 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				90A3B35D20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift */,
-			);
-			name = Extensions;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		9015873C20AC2B770024B7DA = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +67,13 @@
 			isa = PBXGroup;
 			children = (
 				90E5AE1A20AC7DF0003A69E4 /* Info.plist */,
+				90943BB720ADB4FF003C4DC9 /* UIView+Shadow.swift */,
+				90943BB920ADB544003C4DC9 /* UIView+Corner.swift */,
+				90A3B35D20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift */,
 				90BBA15F20ACB1BA004A2CE2 /* Model */,
 				90FEBB3A20AC7961004BAFAD /* Controller */,
 				90FEBB3B20AC7971004BAFAD /* View */,
 				90FEBB3C20AC7990004BAFAD /* Supporting Files */,
-				90088EF420AC93D000B817E5 /* Extensions */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -190,6 +187,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90943BB820ADB4FF003C4DC9 /* UIView+Shadow.swift in Sources */,
+				90943BBA20ADB544003C4DC9 /* UIView+Corner.swift in Sources */,
 				9015874B20AC2B770024B7DA /* ViewController.swift in Sources */,
 				9015874920AC2B770024B7DA /* AppDelegate.swift in Sources */,
 				90BBA15E20ACB1B3004A2CE2 /* RenderViewToImage.swift in Sources */,
