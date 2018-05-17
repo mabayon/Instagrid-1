@@ -32,8 +32,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomRectangleLayout: UIButton!
     @IBOutlet weak var squaresLayout: UIButton!
     
-    @IBOutlet var swipeUpButton: [UIButton]!
-    @IBOutlet var swipeLeftButton: [UIButton]!
+    @IBOutlet weak var signUp: UIButton!
+    @IBOutlet weak var swipeUpLabel: UILabel!
+    @IBOutlet weak var signLeft: UIButton!
+    @IBOutlet weak var swipeLeftLabel: UILabel!
     
     
     //MARK: UIImagePickerControllerDelegate
@@ -60,15 +62,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         swipeUp[0].direction = .up
         swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
         swipeUp[1].direction = .up
-        swipeUpButton[0].addGestureRecognizer(swipeUp[0])
-        swipeUpButton[1].addGestureRecognizer(swipeUp[1])
+        signUp.addGestureRecognizer(swipeUp[0])
+        swipeUpLabel.addGestureRecognizer(swipeUp[1])
         
         swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
         swipeLeft[0].direction = .left
         swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
         swipeLeft[1].direction = .left
-        swipeLeftButton[0].addGestureRecognizer(swipeLeft[0])
-        swipeLeftButton[1].addGestureRecognizer(swipeLeft[1])
+        signLeft.addGestureRecognizer(swipeLeft[0])
+        swipeLeftLabel.addGestureRecognizer(swipeLeft[1])
         
     }
     
