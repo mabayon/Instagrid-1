@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90088EF320AC93B000B817E5 /* UIImagePickerController+DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90088EF220AC93B000B817E5 /* UIImagePickerController+DeviceOrientation.swift */; };
 		9015874920AC2B770024B7DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9015874820AC2B770024B7DA /* AppDelegate.swift */; };
 		9015874B20AC2B770024B7DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9015874A20AC2B770024B7DA /* ViewController.swift */; };
 		9015874E20AC2B770024B7DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9015874C20AC2B770024B7DA /* Main.storyboard */; };
@@ -15,11 +14,11 @@
 		9015875320AC2B780024B7DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9015875120AC2B780024B7DA /* LaunchScreen.storyboard */; };
 		9015875C20AC39FA0024B7DA /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9015875A20AC39FA0024B7DA /* Delm-Medium.otf */; };
 		9015875D20AC39FA0024B7DA /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */; };
+		90A3B35E20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A3B35D20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift */; };
 		90BBA15E20ACB1B3004A2CE2 /* RenderViewToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBA15D20ACB1B3004A2CE2 /* RenderViewToImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		90088EF220AC93B000B817E5 /* UIImagePickerController+DeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+DeviceOrientation.swift"; sourceTree = "<group>"; };
 		9015874520AC2B770024B7DA /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9015874820AC2B770024B7DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9015874A20AC2B770024B7DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		9015875220AC2B780024B7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9015875A20AC39FA0024B7DA /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		90A3B35D20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImagePickerController+DeviceOrientation.swift"; path = "Instagrid/Extensions/UIImagePickerController+DeviceOrientation.swift"; sourceTree = SOURCE_ROOT; };
 		90BBA15D20ACB1B3004A2CE2 /* RenderViewToImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderViewToImage.swift; sourceTree = "<group>"; };
 		90E5AE1A20AC7DF0003A69E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,7 +46,7 @@
 		90088EF420AC93D000B817E5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				90088EF220AC93B000B817E5 /* UIImagePickerController+DeviceOrientation.swift */,
+				90A3B35D20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift */,
 			);
 			name = Extensions;
 			path = "New Group";
@@ -71,8 +71,8 @@
 		9015874720AC2B770024B7DA /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				90BBA15F20ACB1BA004A2CE2 /* Model */,
 				90E5AE1A20AC7DF0003A69E4 /* Info.plist */,
+				90BBA15F20ACB1BA004A2CE2 /* Model */,
 				90FEBB3A20AC7961004BAFAD /* Controller */,
 				90FEBB3B20AC7971004BAFAD /* View */,
 				90FEBB3C20AC7990004BAFAD /* Supporting Files */,
@@ -191,9 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9015874B20AC2B770024B7DA /* ViewController.swift in Sources */,
-				90088EF320AC93B000B817E5 /* UIImagePickerController+DeviceOrientation.swift in Sources */,
 				9015874920AC2B770024B7DA /* AppDelegate.swift in Sources */,
 				90BBA15E20ACB1B3004A2CE2 /* RenderViewToImage.swift in Sources */,
+				90A3B35E20AD69CE006687D6 /* UIImagePickerController+DeviceOrientation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
