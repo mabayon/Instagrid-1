@@ -11,13 +11,8 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var buttonTapped = UIButton()
-    
     enum ViewMovement { case out, backIn }
     
-    let verticalRange: CGFloat = 600
-    let horizontalRange: CGFloat = 600
-    
-    let offScreenPosition = CGPoint(x: 207.0, y: -232.0)
     
     @IBOutlet weak var grids: UIView!
     
@@ -174,38 +169,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @objc func swipeGesture(with gesture: UISwipeGestureRecognizer) {
         switch gesture.direction {
         case .up:
-            moveViewVertically(.out, range: verticalRange)
+            moveViewVertically(.out)
             shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "plus")), deviceOrientation: "portrait")
         case .left:
-            moveViewHorizontally(.out, range: horizontalRange)
+            moveViewHorizontally(.out)
             shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "plus")), deviceOrientation: "landscape")
         default:
             break
         }
     }
 
-    private func moveViewVertically(_ movement: ViewMovement, range: CGFloat) {
+    private func moveViewVertically(_ movement: ViewMovement) {
         switch movement {
         case .out:
             UIView.animate(withDuration: 0.5) {
-                self.grids.center.y -= range
+                self.grids.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
             }
         case .backIn:
             UIView.animate(withDuration: 0.5) {
-                self.grids.center.y += range
+                self.grids.transform = .identity
             }
         }
     }
 
-    private func moveViewHorizontally(_ movement: ViewMovement, range: CGFloat) {
+    private func moveViewHorizontally(_ movement: ViewMovement) {
         switch movement {
         case .out:
             UIView.animate(withDuration: 0.5) {
-                self.grids.center.x -= range
+                self.grids.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
             }
         case .backIn:
             UIView.animate(withDuration: 0.5) {
-                self.grids.center.x += range
+                self.grids.transform = .identity
             }
         }
     }
@@ -213,39 +208,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //MARK: share
     private func shareGrid(with imageToShare: UIImage, deviceOrientation: String) {
         let activityViewController = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
-        self.present(activityViewController, animated: true, completion: {
-            print("presented")
-            //self.grids.center = self.offScreenPosition
-            print("position share is \(self.grids.center)")
-        })
-        
         switch deviceOrientation {
         case "portrait":
             activityViewController.completionWithItemsHandler = {(UIActivityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
                 if !completed {
-                    print("cancelled")
-                    self.moveViewVertically(.backIn, range: self.verticalRange)
+                    self.moveViewVertically(.backIn)
                 }
-                if completed {
-                    print("completed")
-                    self.moveViewVertically(.backIn, range: self.verticalRange)
-                }
+                    self.moveViewVertically(.backIn)
             }
         case "landscape":
             activityViewController.completionWithItemsHandler = {(UIActivityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
                 if !completed {
-                    print("cancelled")
-                    self.moveViewHorizontally(.backIn, range: self.horizontalRange)
+                    self.moveViewHorizontally(.backIn)
                 }
-                if completed {
-                    self.moveViewHorizontally(.backIn, range: self.horizontalRange)
-                }
+                    self.moveViewHorizontally(.backIn)
             }
         default:
             break
         }
+        present(activityViewController, animated: true, completion: nil)
     }
     
-        
 }
 
