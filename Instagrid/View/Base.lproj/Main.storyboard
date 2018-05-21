@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,11 +24,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41X-If-N8Z" userLabel="topRectangleLayout">
-                                <rect key="frame" x="544.5" y="59" width="80.5" height="80"/>
+                                <rect key="frame" x="48" y="555.5" width="80" height="79.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="41X-If-N8Z" secondAttribute="height" multiplier="1:1" id="RMB-UC-JJb"/>
                                     <constraint firstAttribute="width" secondItem="41X-If-N8Z" secondAttribute="height" multiplier="1:1" id="q8f-Ss-UVU"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdC-Nc-xI5" userLabel="squaresLayout">
-                                <rect key="frame" x="545" y="279" width="80" height="80"/>
+                                <rect key="frame" x="247.5" y="555.5" width="79.5" height="79.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mdC-Nc-xI5" secondAttribute="height" multiplier="1:1" id="LP1-83-jiH"/>
                                     <constraint firstAttribute="width" secondItem="mdC-Nc-xI5" secondAttribute="height" multiplier="1:1" id="UdL-Zs-V85"/>
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG1-I3-AaE" userLabel="bottomRectangleLayout">
-                                <rect key="frame" x="545" y="169" width="80" height="80"/>
+                                <rect key="frame" x="148" y="555.5" width="79.5" height="79.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yG1-I3-AaE" secondAttribute="height" multiplier="1:1" id="7ya-nl-GzB"/>
                                     <constraint firstAttribute="width" secondItem="yG1-I3-AaE" secondAttribute="height" multiplier="1:1" id="Ot1-Ly-L8P"/>
@@ -117,10 +117,10 @@
                                 </variation>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-If-o6F" userLabel="grids">
-                                <rect key="frame" x="195" y="59" width="300.5" height="300"/>
+                                <rect key="frame" x="37" y="183" width="301" height="300.5"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHd-pC-QB5" userLabel="topRectangle">
-                                        <rect key="frame" x="15" y="15" width="270.5" height="127.5"/>
+                                        <rect key="frame" x="15" y="15" width="271" height="127.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="plus"/>
                                         <userDefinedRuntimeAttributes>
@@ -133,7 +133,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDu-Zz-7Nu" userLabel="bottomRectangle">
-                                        <rect key="frame" x="15" y="157.5" width="270.5" height="127.5"/>
+                                        <rect key="frame" x="15" y="157.5" width="271" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="plus"/>
                                         <userDefinedRuntimeAttributes>
@@ -162,7 +162,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-3T-F5z" userLabel="topRightSquare">
-                                        <rect key="frame" x="157" y="15" width="128.5" height="128.5"/>
+                                        <rect key="frame" x="157" y="15" width="129" height="129.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mw7-3T-F5z" secondAttribute="height" multiplier="1:1" id="TfK-Q3-KE9"/>
@@ -178,7 +178,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZo-Nh-ElZ" userLabel="bottomLeftSquare">
-                                        <rect key="frame" x="15" y="157.5" width="128" height="127.5"/>
+                                        <rect key="frame" x="15" y="157.5" width="128" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="EZo-Nh-ElZ" secondAttribute="height" multiplier="1:1" id="deE-aZ-Gd2"/>
@@ -194,7 +194,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-1x-VRS" userLabel="bottomRightSquare">
-                                        <rect key="frame" x="158" y="157.5" width="127.5" height="127.5"/>
+                                        <rect key="frame" x="158" y="157.5" width="128" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1Eo-1x-VRS" secondAttribute="height" multiplier="1:1" id="NlB-Pe-nLz"/>
@@ -263,7 +263,7 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ece-6i-rPb">
-                                <rect key="frame" x="284" y="11" width="123" height="39"/>
+                                <rect key="frame" x="126" y="48" width="123" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="Rwt-Jg-AaI"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="veR-Lp-lyC"/>
@@ -354,7 +354,6 @@
                             <mask key="constraints">
                                 <exclude reference="8BY-uV-97w"/>
                                 <exclude reference="oS3-DP-nuv"/>
-                                <exclude reference="tbX-r0-KQJ"/>
                                 <exclude reference="qX9-T8-RBd"/>
                                 <exclude reference="t1f-Me-edT"/>
                                 <exclude reference="xcA-db-bkz"/>
@@ -367,6 +366,7 @@
                                 <exclude reference="mMB-Zo-50W"/>
                                 <exclude reference="vFv-gs-2fH"/>
                                 <exclude reference="E2K-95-rhU"/>
+                                <exclude reference="tbX-r0-KQJ"/>
                                 <exclude reference="v21-5N-S6x"/>
                                 <exclude reference="Geb-fc-EHW"/>
                                 <exclude reference="J1T-I3-Ubd"/>
@@ -383,7 +383,6 @@
                             <mask key="constraints">
                                 <include reference="8BY-uV-97w"/>
                                 <include reference="oS3-DP-nuv"/>
-                                <include reference="tbX-r0-KQJ"/>
                                 <exclude reference="bBO-br-HaV"/>
                                 <include reference="qX9-T8-RBd"/>
                                 <include reference="t1f-Me-edT"/>
@@ -400,7 +399,6 @@
                                 <include reference="JP4-pk-UOa"/>
                                 <include reference="MAw-2x-1wR"/>
                                 <exclude reference="zfI-z2-I6C"/>
-                                <exclude reference="YRF-8W-5br"/>
                                 <exclude reference="9ud-1t-VEF"/>
                                 <include reference="Zst-e7-Qf9"/>
                                 <include reference="dML-pU-V5z"/>
@@ -408,6 +406,8 @@
                                 <include reference="vFv-gs-2fH"/>
                                 <exclude reference="4LB-5e-ALc"/>
                                 <include reference="E2K-95-rhU"/>
+                                <include reference="tbX-r0-KQJ"/>
+                                <exclude reference="YRF-8W-5br"/>
                                 <exclude reference="RZe-Eq-bTH"/>
                                 <exclude reference="c1S-Ui-z4A"/>
                                 <include reference="v21-5N-S6x"/>

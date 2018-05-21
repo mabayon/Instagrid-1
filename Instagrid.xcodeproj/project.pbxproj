@@ -14,6 +14,7 @@
 		9015875320AC2B780024B7DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9015875120AC2B780024B7DA /* LaunchScreen.storyboard */; };
 		9015875C20AC39FA0024B7DA /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9015875A20AC39FA0024B7DA /* Delm-Medium.otf */; };
 		9015875D20AC39FA0024B7DA /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */; };
+		907F7C3320B1A65300C579EA /* BlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907F7C3220B1A65300C579EA /* BlurViewController.swift */; };
 		90943BBF20ADBA3F003C4DC9 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90943BBC20ADBA3F003C4DC9 /* UIView+Shadow.swift */; };
 		90943BC020ADBA3F003C4DC9 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90943BBD20ADBA3F003C4DC9 /* UIView+Corner.swift */; };
 		90943BC120ADBA3F003C4DC9 /* UIImagePickerController+DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90943BBE20ADBA3F003C4DC9 /* UIImagePickerController+DeviceOrientation.swift */; };
@@ -29,6 +30,7 @@
 		9015875220AC2B780024B7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9015875A20AC39FA0024B7DA /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		9015875B20AC39FA0024B7DA /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		907F7C3220B1A65300C579EA /* BlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurViewController.swift; sourceTree = "<group>"; };
 		90943BBC20ADBA3F003C4DC9 /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		90943BBD20ADBA3F003C4DC9 /* UIView+Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
 		90943BBE20ADBA3F003C4DC9 /* UIImagePickerController+DeviceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+DeviceOrientation.swift"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9015874A20AC2B770024B7DA /* ViewController.swift */,
+				907F7C3220B1A65300C579EA /* BlurViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907F7C3320B1A65300C579EA /* BlurViewController.swift in Sources */,
 				90943BBF20ADBA3F003C4DC9 /* UIView+Shadow.swift in Sources */,
 				90943BC020ADBA3F003C4DC9 /* UIView+Corner.swift in Sources */,
 				90943BC120ADBA3F003C4DC9 /* UIImagePickerController+DeviceOrientation.swift in Sources */,

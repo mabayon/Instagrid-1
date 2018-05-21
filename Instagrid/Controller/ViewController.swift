@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var buttonTapped = UIButton()
     enum ViewMovement { case out, backIn }
+    let layoutTransition = BlurViewController()
     
     
     @IBOutlet weak var grids: UIView!
@@ -114,7 +115,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    //choose grid's layout
+    //MARK: choose grid's layout
     @IBAction func chooseLayout(_ sender: UIButton) {
         switch sender.tag {
             /*
@@ -136,6 +137,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             bottomRectangleLayout.isSelected = false
             squaresLayout.isSelected = false
             
+            layoutTransition.blurUnblur(view: grids)
+            
         case 1:
             topRectangle.isHidden = true
             bottomRectangle.isHidden = false
@@ -148,6 +151,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             topRectangleLayout.isSelected = false
             squaresLayout.isSelected = false
             
+            layoutTransition.blurUnblur(view: grids)
+
+            
         case 2:
             topRectangle.isHidden = true
             bottomRectangle.isHidden = true
@@ -159,6 +165,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             sender.isSelected = true
             topRectangleLayout.isSelected = false
             bottomRectangleLayout.isSelected = false
+            
+            layoutTransition.blurUnblur(view: grids)
             
         default:
             break
