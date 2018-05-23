@@ -146,7 +146,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akF-m5-VPQ" userLabel="topLeftSquare">
-                                        <rect key="frame" x="15" y="15" width="127" height="127.5"/>
+                                        <rect key="frame" x="15" y="15" width="128" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="akF-m5-VPQ" secondAttribute="height" multiplier="1:1" id="BHF-62-arj"/>
@@ -162,7 +162,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-3T-F5z" userLabel="topRightSquare">
-                                        <rect key="frame" x="157" y="15" width="129" height="129.5"/>
+                                        <rect key="frame" x="158" y="15" width="128" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mw7-3T-F5z" secondAttribute="height" multiplier="1:1" id="TfK-Q3-KE9"/>

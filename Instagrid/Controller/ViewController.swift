@@ -178,10 +178,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         switch gesture.direction {
         case .up:
             moveViewVertically(.out)
-            shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "plus")), deviceOrientation: "portrait")
+            shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "Icon-Original")), deviceOrientation: "portrait")
         case .left:
             moveViewHorizontally(.out)
-            shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "plus")), deviceOrientation: "landscape")
+            shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "Icon-Original")), deviceOrientation: "landscape")
         default:
             break
         }
