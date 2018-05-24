@@ -10,6 +10,11 @@ import UIKit
 
 class BlurViewController: UIViewController {
     
+    func blurUnblur(view: UIView) {
+        blur(view: view)
+        unBlur(view: view)
+    }
+    
     private let blurOverlay = UIVisualEffectView()
     
     private func blur(view: UIView) {
@@ -26,11 +31,6 @@ class BlurViewController: UIViewController {
         }) { (finished: Bool) in
             self.blurOverlay.removeFromSuperview()
         }
-    }
-    
-    func blurUnblur(view: UIView) {
-        blur(view: view)
-        unBlur(view: view)
     }
     
 }
