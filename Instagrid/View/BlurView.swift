@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlurViewController: UIViewController {
+class BlurView: UIView {
     
     func blurUnblur(view: UIView) {
         blur(view: view)

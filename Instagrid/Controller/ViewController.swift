@@ -12,7 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var buttonTapped = UIButton()
     enum ViewMovement { case out, backIn }
-    let layoutTransition = BlurViewController()
+    let layoutTransition = BlurView()
     
     
     @IBOutlet weak var grids: UIView!
