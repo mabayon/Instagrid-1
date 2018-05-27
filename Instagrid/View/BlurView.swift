@@ -21,7 +21,7 @@ class BlurView: UIView {
         self.blurOverlay.frame = view.bounds
         view.addSubview(self.blurOverlay)
         UIView.animate(withDuration: 0.3) {
-            self.blurOverlay.effect = UIBlurEffect(style: .dark)
+        self.blurOverlay.effect = UIBlurEffect(style: .dark)
         }
     }
     

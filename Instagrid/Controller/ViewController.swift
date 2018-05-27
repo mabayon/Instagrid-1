@@ -126,51 +126,55 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
              squaresLayout.tag = 2
              */
         case 0:
-            topRectangle.isHidden = false
-            bottomRectangle.isHidden = true
-            bottomLeftSquare.isHidden = false
-            bottomRightSquare.isHidden = false
-            topLeftSquare.isHidden = true
-            topRightSquare.isHidden = true
-            
-            sender.isSelected = true
-            bottomRectangleLayout.isSelected = false
-            squaresLayout.isSelected = false
-            
-            layoutTransition.blurUnblur(view: grids)
-            
+            presentTopRectangleLayout(sender: sender)
         case 1:
-            topRectangle.isHidden = true
-            bottomRectangle.isHidden = false
-            topLeftSquare.isHidden = false
-            topRightSquare.isHidden = false
-            bottomLeftSquare.isHidden = true
-            bottomRightSquare.isHidden = true
-            
-            sender.isSelected = true
-            topRectangleLayout.isSelected = false
-            squaresLayout.isSelected = false
-            
-            layoutTransition.blurUnblur(view: grids)
-
-            
+            presentBottomRectangleLayout(sender: sender)
         case 2:
-            topRectangle.isHidden = true
-            bottomRectangle.isHidden = true
-            topLeftSquare.isHidden = false
-            topRightSquare.isHidden = false
-            bottomLeftSquare.isHidden = false
-            bottomRightSquare.isHidden = false
-            
-            sender.isSelected = true
-            topRectangleLayout.isSelected = false
-            bottomRectangleLayout.isSelected = false
-            
-            layoutTransition.blurUnblur(view: grids)
-            
+            presentFourSquaresLayout(sender: sender)
         default:
             break
         }
+        
+        layoutTransition.blurUnblur(view: grids)
+    }
+    
+    func presentTopRectangleLayout(sender: UIButton) {
+        topRectangle.isHidden = false
+        bottomRectangle.isHidden = true
+        bottomLeftSquare.isHidden = false
+        bottomRightSquare.isHidden = false
+        topLeftSquare.isHidden = true
+        topRightSquare.isHidden = true
+        
+        sender.isSelected = true
+        bottomRectangleLayout.isSelected = false
+        squaresLayout.isSelected = false
+    }
+    
+    func presentBottomRectangleLayout(sender: UIButton) {
+        topRectangle.isHidden = true
+        bottomRectangle.isHidden = false
+        topLeftSquare.isHidden = false
+        topRightSquare.isHidden = false
+        bottomLeftSquare.isHidden = true
+        bottomRightSquare.isHidden = true
+        
+        sender.isSelected = true
+        topRectangleLayout.isSelected = false
+        squaresLayout.isSelected = false
+    }
+    
+    func presentFourSquaresLayout(sender: UIButton) {
+        topRectangle.isHidden = true
+        bottomRectangle.isHidden = true
+        topLeftSquare.isHidden = false
+        topRightSquare.isHidden = false
+        bottomLeftSquare.isHidden = false
+        bottomRightSquare.isHidden = false
+        
+        sender.isSelected = true
+        topRectangleLayout.isSelected = false
+        bottomRectangleLayout.isSelected = false
     }
     
     //MARK: swipe to share
