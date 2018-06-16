@@ -51,23 +51,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var swipeUp = [UISwipeGestureRecognizer]()
-        var swipeLeft = [UISwipeGestureRecognizer]()
-        
-        swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
-        swipeUp[0].direction = .up
-        swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
-        swipeUp[1].direction = .up
-        signUpButton.addGestureRecognizer(swipeUp[0])
-        swipeUpLabelLabel.addGestureRecognizer(swipeUp[1])
-        
-        swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
-        swipeLeft[0].direction = .left
-        swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
-        swipeLeft[1].direction = .left
-        signLeftButton.addGestureRecognizer(swipeLeft[0])
-        swipeLeftLabel.addGestureRecognizer(swipeLeft[1])
-        
+        self.createSwipeGesture()
     }
     
     
@@ -175,6 +159,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         sender.isSelected = true
         topRectangleLayoutButton.isSelected = false
         bottomRectangleLayoutButton.isSelected = false
+    }
+    
+    //MARK: create swipe gesture
+    private func createSwipeGesture() {
+        var swipeUp = [UISwipeGestureRecognizer]()
+        var swipeLeft = [UISwipeGestureRecognizer]()
+        
+        swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
+        swipeUp[0].direction = .up
+        swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
+        swipeUp[1].direction = .up
+        signUpButton.addGestureRecognizer(swipeUp[0])
+        swipeUpLabelLabel.addGestureRecognizer(swipeUp[1])
+        
+        swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
+        swipeLeft[0].direction = .left
+        swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
+        swipeLeft[1].direction = .left
+        signLeftButton.addGestureRecognizer(swipeLeft[0])
+        swipeLeftLabel.addGestureRecognizer(swipeLeft[1])
     }
     
     //MARK: swipe to share
