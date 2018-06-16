@@ -15,22 +15,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let layoutTransition = BlurView()
     
     
-    @IBOutlet weak var grids: UIView!
+    @IBOutlet weak var gridsView: UIView!
     
-    @IBOutlet weak var topRectangle: UIButton!
-    @IBOutlet weak var bottomRectangle: UIButton!
-    @IBOutlet weak var topLeftSquare: UIButton!
-    @IBOutlet weak var topRightSquare: UIButton!
-    @IBOutlet weak var bottomLeftSquare: UIButton!
-    @IBOutlet weak var bottomRightSquare: UIButton!
+    @IBOutlet weak var topRectangleButton: UIButton!
+    @IBOutlet weak var bottomRectangleButton: UIButton!
+    @IBOutlet weak var topLeftSquareButton: UIButton!
+    @IBOutlet weak var topRightSquareButton: UIButton!
+    @IBOutlet weak var bottomLeftSquareButton: UIButton!
+    @IBOutlet weak var bottomRightSquareButton: UIButton!
     
-    @IBOutlet weak var topRectangleLayout: UIButton!
-    @IBOutlet weak var bottomRectangleLayout: UIButton!
-    @IBOutlet weak var squaresLayout: UIButton!
+    @IBOutlet weak var topRectangleLayoutButton: UIButton!
+    @IBOutlet weak var bottomRectangleLayoutButton: UIButton!
+    @IBOutlet weak var squaresLayoutButton: UIButton!
     
-    @IBOutlet weak var signUp: UIButton!
-    @IBOutlet weak var swipeUpLabel: UILabel!
-    @IBOutlet weak var signLeft: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var swipeUpLabelLabel: UILabel!
+    @IBOutlet weak var signLeftButton: UIButton!
     @IBOutlet weak var swipeLeftLabel: UILabel!
     
     
@@ -58,14 +58,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         swipeUp[0].direction = .up
         swipeUp.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
         swipeUp[1].direction = .up
-        signUp.addGestureRecognizer(swipeUp[0])
-        swipeUpLabel.addGestureRecognizer(swipeUp[1])
+        signUpButton.addGestureRecognizer(swipeUp[0])
+        swipeUpLabelLabel.addGestureRecognizer(swipeUp[1])
         
         swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
         swipeLeft[0].direction = .left
         swipeLeft.append(UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture(with:))))
         swipeLeft[1].direction = .left
-        signLeft.addGestureRecognizer(swipeLeft[0])
+        signLeftButton.addGestureRecognizer(swipeLeft[0])
         swipeLeftLabel.addGestureRecognizer(swipeLeft[1])
         
     }
@@ -75,13 +75,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func tapToPickPhoto(_ sender: UIButton) {
         switch sender.tag {
             /*
-             -- grids objects tag's layout --
-             topLeftSquare.tag = 1OO
-             topRightSquare.tag = 101
-             bottomLeftSquare.tag = 102
-             bottomRightSquare.tag = 1O3
-             topRectangle.tag = 110
-             bottomRectangle.tag = 111
+             -- gridsView objects tag's layout --
+             topLeftSquareButton.tag = 1OO
+             topRightSquareButton.tag = 101
+             bottomLeftSquareButton.tag = 102
+             bottomRightSquareButton.tag = 1O3
+             topRectangleButton.tag = 110
+             bottomRectangleButton.tag = 111
              */
         case 100:
             pickPhotoFromLibrary(for: sender)
@@ -119,9 +119,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func chooseLayout(_ sender: UIButton) {
         switch sender.tag {
             /*
-             -- grids selectors tags layout --
+             -- gridsView selectors tags layout --
              
-             topRectangleLayout.tag = 0
+             topRectangleLayoutButton.tag = 0
              bottomRectangleLayout.tag = 1
              squaresLayout.tag = 2
              */
@@ -135,46 +135,46 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             break
         }
         
-        layoutTransition.blurUnblur(view: grids)
+        layoutTransition.blurUnblur(view: gridsView)
     }
     
     func presentTopRectangleLayout(sender: UIButton) {
-        topRectangle.isHidden = false
-        bottomRectangle.isHidden = true
-        bottomLeftSquare.isHidden = false
-        bottomRightSquare.isHidden = false
-        topLeftSquare.isHidden = true
-        topRightSquare.isHidden = true
+        topRectangleButton.isHidden = false
+        bottomRectangleButton.isHidden = true
+        bottomLeftSquareButton.isHidden = false
+        bottomRightSquareButton.isHidden = false
+        topLeftSquareButton.isHidden = true
+        topRightSquareButton.isHidden = true
         
         sender.isSelected = true
-        bottomRectangleLayout.isSelected = false
-        squaresLayout.isSelected = false
+        bottomRectangleLayoutButton.isSelected = false
+        squaresLayoutButton.isSelected = false
     }
     
     func presentBottomRectangleLayout(sender: UIButton) {
-        topRectangle.isHidden = true
-        bottomRectangle.isHidden = false
-        topLeftSquare.isHidden = false
-        topRightSquare.isHidden = false
-        bottomLeftSquare.isHidden = true
-        bottomRightSquare.isHidden = true
+        topRectangleButton.isHidden = true
+        bottomRectangleButton.isHidden = false
+        topLeftSquareButton.isHidden = false
+        topRightSquareButton.isHidden = false
+        bottomLeftSquareButton.isHidden = true
+        bottomRightSquareButton.isHidden = true
         
         sender.isSelected = true
-        topRectangleLayout.isSelected = false
-        squaresLayout.isSelected = false
+        topRectangleLayoutButton.isSelected = false
+        squaresLayoutButton.isSelected = false
     }
     
     func presentFourSquaresLayout(sender: UIButton) {
-        topRectangle.isHidden = true
-        bottomRectangle.isHidden = true
-        topLeftSquare.isHidden = false
-        topRightSquare.isHidden = false
-        bottomLeftSquare.isHidden = false
-        bottomRightSquare.isHidden = false
+        topRectangleButton.isHidden = true
+        bottomRectangleButton.isHidden = true
+        topLeftSquareButton.isHidden = false
+        topRightSquareButton.isHidden = false
+        bottomLeftSquareButton.isHidden = false
+        bottomRightSquareButton.isHidden = false
         
         sender.isSelected = true
-        topRectangleLayout.isSelected = false
-        bottomRectangleLayout.isSelected = false
+        topRectangleLayoutButton.isSelected = false
+        bottomRectangleLayoutButton.isSelected = false
     }
     
     //MARK: swipe to share
@@ -182,10 +182,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         switch gesture.direction {
         case .up:
             moveViewVertically(.out)
-            shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "Icon-Original")), deviceOrientation: "portrait")
+            shareGrid(with: RenderViewToImage.render(gridsView, defaultImage: #imageLiteral(resourceName: "Icon-Original")), deviceOrientation: "portrait")
         case .left:
             moveViewHorizontally(.out)
-            shareGrid(with: RenderViewToImage.render(grids, defaultImage: #imageLiteral(resourceName: "Icon-Original")), deviceOrientation: "landscape")
+            shareGrid(with: RenderViewToImage.render(gridsView, defaultImage: #imageLiteral(resourceName: "Icon-Original")), deviceOrientation: "landscape")
         default:
             break
         }
@@ -195,11 +195,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         switch movement {
         case .out:
             UIView.animate(withDuration: 0.5) {
-                self.grids.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
+                self.gridsView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
             }
         case .backIn:
             UIView.animate(withDuration: 0.5) {
-                self.grids.transform = .identity
+                self.gridsView.transform = .identity
             }
         }
     }
@@ -208,11 +208,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         switch movement {
         case .out:
             UIView.animate(withDuration: 0.5) {
-                self.grids.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
+                self.gridsView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
             }
         case .backIn:
             UIView.animate(withDuration: 0.5) {
-                self.grids.transform = .identity
+                self.gridsView.transform = .identity
             }
         }
     }
