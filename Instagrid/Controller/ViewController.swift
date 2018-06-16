@@ -223,16 +223,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         switch deviceOrientation {
         case "portrait":
             activityViewController.completionWithItemsHandler = {(UIActivityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
-                if !completed {
-                    self.moveViewVertically(.backIn)
-                }
                     self.moveViewVertically(.backIn)
             }
         case "landscape":
             activityViewController.completionWithItemsHandler = {(UIActivityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
-                if !completed {
-                    self.moveViewHorizontally(.backIn)
-                }
                     self.moveViewHorizontally(.backIn)
             }
         default:
