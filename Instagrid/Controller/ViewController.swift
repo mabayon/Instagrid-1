@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var buttonTapped = UIButton()
-    enum ViewMovement { case out, backIn }
+    enum ViewDirection { case out, backIn }
     let layoutTransition = BlurView()
     
     
@@ -195,7 +195,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
 
-    private func moveViewVertically(_ movement: ViewMovement) {
+    private func moveViewVertically(_ movement: ViewDirection) {
         switch movement {
         case .out:
             UIView.animate(withDuration: 0.5) {
@@ -208,7 +208,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
 
-    private func moveViewHorizontally(_ movement: ViewMovement) {
+    private func moveViewHorizontally(_ movement: ViewDirection) {
         switch movement {
         case .out:
             UIView.animate(withDuration: 0.5) {
