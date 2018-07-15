@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController {
     
     var buttonTapped = UIButton()
     enum ViewDirection { case out, backIn }
@@ -32,20 +32,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var swipeUpLabelLabel: UILabel!
     @IBOutlet weak var signLeftButton: UIButton!
     @IBOutlet weak var swipeLeftLabel: UILabel!
-    
-    
-    //MARK: UIImagePickerControllerDelegate
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
-        buttonTapped.setImage(selectedImage, for: .normal)
-        dismiss(animated: true, completion: nil)
-    }
     
     
     override func viewDidLoad() {
@@ -241,3 +227,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
 }
 
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    //MARK: UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        buttonTapped.setImage(selectedImage, for: .normal)
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
